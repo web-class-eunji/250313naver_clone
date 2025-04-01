@@ -1,3 +1,9 @@
+:root {
+    --main-green: #21c531;
+    --background: #f6f8fa;
+    --font-black-color: #444444;
+    --main-section-margin-top : 50px;
+}
 
 /* 헤더시작 */
 .logo {
@@ -29,7 +35,7 @@ header {
     width: 100px;
     border: none;
     outline: none;
-    background: #f6f8fa;
+    background: var(--background);
 }
 
 .lang_select:hover {
@@ -41,9 +47,10 @@ header {
     padding: 8px 16px;
 }
 
-.header_menu > li:last-child > a {
+.header_menu > li:last-child > a,
+.button_box > button:first-child {
     color: #fff;
-    background-color: #21c531;
+    background-color: var(--main-green);
     border-radius: 3px;
     transition: 0.3s;
 }
@@ -56,11 +63,12 @@ header {
 
 /* main_container 시작 */
 .main_container {
-    background-color: #f6f8fa;
+    background-color: var(--background);
     display: flex;
     justify-content: center;
     gap: 50px;
     align-items: center;
+    padding: 50px 0;
 }
 
 .phone_ui {
@@ -69,3 +77,286 @@ header {
     height: 695px;
     background-size: 540px auto;
 }
+
+.main_text_box {
+    margin-bottom: 70px;
+}
+
+.main_text_box > h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.main_text_box > p,
+.button_box > button:last-child > a {
+    color: var(--font-black-color);
+}
+
+.button_box {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0 32px 0;
+}
+
+.button_box > button {
+    border: none;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.button_box > button > a {
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+.button_box > button:last-child {
+    margin-top: 8px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+}
+
+.button_box > button:first-child:hover {
+    box-shadow: 0 4px 5px rgba(33,197,49, 0.3);
+}
+
+.button_box > button:last-child:hover {
+    box-shadow: 0 4px 5px rgba(131, 131, 131, 0.2);
+}
+
+.link_text_box > p {
+    margin: 16px 0;
+    font-size: 13px;
+}
+
+.link_text_box > p > a {
+    color: var(--main-green);
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+/* main_container 끝 */
+
+/* bg_img_container시작 */
+.bg_img_container {
+    background: url(../image/bg_intro.jpg);
+    height: 540px;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.bg_img_container > h2 {
+    font-size: 40px;
+    margin-bottom: 32px;
+    font-weight: 600;
+}
+
+.bg_img_container > p {
+    line-height: 24px;
+    font-weight: 500;
+}
+
+/* bg_img_container 끝 */
+
+/* band_function 시작 */
+
+.band_function {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.band_function > ul {
+    display: flex;
+    width: 1000px;
+    justify-content: space-between;
+}
+
+.function_img1 {
+    background: url(../image/list1.jpg);
+    background-size: 300px 150px;
+}
+
+.function_img2 {
+    background: url(../image/list2.jpg);
+    background-size: 300px 150px;
+}
+
+.function_img3 {
+    background: url(../image/list3.jpg);
+    background-size: 300px 150px;
+}
+
+.function_list > figure {
+    width: 300px;
+    height: 150px;
+}
+
+.function_list > h2 {
+    font-size: 24px;
+    margin: 16px 0;
+}
+
+.function_list > p {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--font-black-color);
+}
+
+/* band_function 끝 */
+
+/* band_recommend 시작 */
+.band_recommend {
+    margin-top: var(--main-section-margin-top);
+    background: var(--background);
+    padding: 50px 0;
+}
+
+.wrpper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.recommend_text > h2 {
+    font-size: 24px;
+}
+
+.recommend_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.recommend_ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recommend_list {
+    display: flex;
+    width: 500px;
+    margin: 8px 0;
+}
+
+.recommend_list > figure {
+    background: url(../image/밴드.jpg);
+    width: 93px;
+    height: 93px;
+    background-size: cover;
+    border-radius: 10px;
+    margin-right: 16px;
+}
+
+.recommend_list_text > h2 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.recommend_list_text > p,
+.recommend_list_text > div > span {
+    font-size: 12px;
+    color: var(--font-black-color);
+    margin: 8px 0;
+}
+
+.more {
+    padding: 2px 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    margin-top: 8px;
+}
+
+.more > span {
+    color: #000;
+    font-weight: 600;
+}
+
+/* band_recommend 끝 */
+
+/* download 시작*/
+
+.download {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.download_left {
+    display: flex;
+    align-items: center;
+}
+
+.download_left > figure {
+    background: url(../image/spr_intro.png);
+    width: 70px;
+    height: 70px;
+    background-position: -162px 0;
+}
+
+.download_left > div {
+    margin-left: 24px;
+}
+
+.download_left > div > h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.download_store > a:first-child {
+    background: url(../image/spr_intro.png);
+    width: 162px;
+    height: 47px;
+    background-position: 0 0;
+    display: inline-block;
+}
+
+.download_store > a:last-child {
+    background: url(../image/spr_intro.png);
+    width: 162px;
+    height: 47px;
+    background-position: 0 -49px;
+    display: inline-block;
+}
+
+/* download 끝 */
+
+/* footer 시작 */
+
+footer {
+    background: #2A3038;
+    padding: 32px;
+}
+
+footer > ul {
+    display: flex;
+    color: #888;
+    font-size: 14px;
+    width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+footer > ul > li {
+    margin: 8px 4px;
+}
+
+footer > p {
+    color: #888;
+    width: 1000px;
+    margin: 32px auto 0 auto;
+}
+
+/* footer끝 */
+
